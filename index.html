@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinéScope — Découvrez le cinéma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinéScope</span>
+        </div>
+        <nav class="nav">
+          <button class="nav-btn active" data-category="popular">
+            Populaires
+          </button>
+          <button class="nav-btn" data-category="top_rated">Top Rated</button>
+          <button class="nav-btn" data-category="upcoming">À venir</button>
+          <button class="nav-btn" data-category="now_playing">En salle</button>
+        </nav>
+        <div class="search-wrap">
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Rechercher un film…"
+          />
+          <span class="search-icon">⌕</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="film-strip" aria-hidden="true">
+        <div class="strip-track" id="stripTrack"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Votre univers cinéma</p>
+        <h1 class="hero-title">Explorez<br />le 7<sup>e</sup> art</h1>
+        <p class="hero-sub">
+          Des milliers de films, des critiques, des tendances — tout en un seul
+          regard.
+        </p>
+      </div>
+      <div class="hero-gradient"></div>
+    </section>
+
+    <main class="main">
+      <div class="section-header">
+        <h2 class="section-title" id="sectionTitle">Films Populaires</h2>
+        <p class="section-count" id="sectionCount"></p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-genre="">Tous</button>
+        <button class="filter-btn" data-genre="28">Action</button>
+        <button class="filter-btn" data-genre="35">Comédie</button>
+        <button class="filter-btn" data-genre="18">Drame</button>
+        <button class="filter-btn" data-genre="27">Horreur</button>
+        <button class="filter-btn" data-genre="878">Sci-Fi</button>
+        <button class="filter-btn" data-genre="10749">Romance</button>
+        <button class="filter-btn" data-genre="16">Animation</button>
+      </div>
+
+      <div class="movies-grid" id="moviesGrid"></div>
+
+      <div class="loader" id="loader">
+        <div class="reel">
+          <div class="reel-hole"></div>
+          <div class="reel-hole"></div>
+          <div class="reel-hole"></div>
+        </div>
+        <p>Chargement…</p>
+      </div>
+
+      <div class="load-more-wrap" id="loadMoreWrap" style="display: none">
+        <button class="load-more-btn" id="loadMoreBtn">
+          Voir plus de films
+        </button>
+      </div>
+    </main>
+
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">
+          ✕
+        </button>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Données fournies par
+        <a href="https://www.themoviedb.org" target="_blank" rel="noopener"
+          >TMDB</a
+        >
+        · CinéScope © 2025
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
