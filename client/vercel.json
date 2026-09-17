@@ -1,0 +1,15 @@
+{
+
+  "rewrites": [
+
+    {
+
+      "source": "/api/:path*",
+
+      "destination": "https://cinescope-backend-ebl6.onrender.com/api/:path*"
+
+    }
+
+  ]
+
+}
